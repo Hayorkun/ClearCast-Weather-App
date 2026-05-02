@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: #1d2636;
+  color: white;
+}
+
+.wholebody {
+  max-width: 600px;
+  height: 100%;
+  padding: 10px 0;
+  padding-bottom: 55px;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.5px solid black;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  background-color: #333c4d;
+}
+
+.navbar i {
+  background: #333c4d;
+  font-size: 23px;
+  color: #969696;
+  font-weight: lighter;
+}
+
+.navbar i:hover {
+  color: #2663eb;
+}
+
+.searchbar {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: black;
+  background-color: #333c4d;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 0.5px solid black;
+}
+
+.searchbar input {
+  border: none;
+  width: 250px;
+  height: 30px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  background: #333c4d;
+}
+
+.searchbar button {
+  border: none;
+  background-color: #333c4d;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.searchbar button i {
+  background: #333c4d;
+}
+
+.forecast-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+  vertical-align: top;
+}
+
+.forecast-location button {
+  padding: 10px;
+  border-radius: 50%;
+  background: #333c4d;
+  border: none;
+}
+
+.forecast-location button i {
+  font-size: 20px;
+  color: #969696;
+  background: #333c4d;
+}
+
+
+.forecast-info {
+  width: 100%;
+  height: fit-content;
+  padding: 10px 20px;
+  display: block;
+}
+
+.forecast-info img {
+  display: flex;
+  justify-self: center;
+  width: 130px;
+}
+
+.forecast-info div h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.forecast-info div p {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.info-div {
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 15px;
+  gap: 1em;
+}
+
+.card {
+  background: #333c4d;
+  padding: 5px 7px;
+  border-radius: 10px;
+
+}
+
+.card p {
+  display: flex;
+  justify-self: left;
+  margin-bottom: 5px;
+  background: #333c4d;
+}
+
+.card h5 {
+  font-size: 20px;
+  background: #333c4d;
+}
+
+.today-forecast {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.card-div {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(8, 110px);
+  gap: 20px;
+  overflow-x: scroll;
+}
+
+.hour-card {
+  padding: 10px;
+
+  background: #333c4d;
+  border-radius: 10px;
+}
+
+.hour-card p {
+  font-size: 25px;
+  font-weight: lighter;
+  background: #333c4d;
+}
+
+.hour-card h6 {
+  margin-top: 5px;
+  font-size: 25px;
+  background: #333c4d;
+}
+
+.hour-card div {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: bottom;
+  background: #333c4d;
+  gap: 10px;
+}
+
+.hour-card div img {
+  width: 50%;
+  background: #333c4d;
+}
+
+.forecast-info,
+.today-forecast,
+.forecast-location,
+#forEachday {
+  display: none;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+}
+
+.empty-state img {
+  width: 80px;
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #2563EB;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #DBEAFE;
+  border-top-color: #2563EB;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ----------------------- */
+section{
+  margin-top: 15px;
+}
+.daily-text {
+  
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.daily-text div h1 {
+  font-size: 25px;
+}
+
+.daily-text div p {
+  font-size: 17px;
+}
+
+.daily-text div h3 {
+  padding: 7px 10px;
+  background: #333c4d;
+  border-radius: 10px;
+}
+
+.day-cont{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day-card{
+  width: 100%;
+  height: 250px;
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #969696;
+  border-radius: 20px;
+}
+.day-div{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   vertical-align: middle;
+
+}
+.div1{
+  display: flex;
+  gap: 10px;
+}
+.div1 div{
+  display: block;
+}
+.div2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.div2 p{
+  padding: 7px;
+  background: #333c4d;
+  border-radius: 10px;
+}
+.day-div img{
+  width: 50px;
+  object-position: center;
+}
+
+.daily-hour {
+  display: grid;
+  grid-template-columns: repeat(8, 77px);
+  padding: 5px;
+  overflow-x: scroll;
+  gap: 10px;
+}
+
+.show-panel {
+  display: grid;
+}
+
+.hour-info {
+  padding: 10px;
+  background: #333c4d;
+  display: block;
+  justify-content: center;
+  border-radius: 13px;
+
+}
+
+.hour-info img {
+  width: 50px;
+  display: flex;
+  justify-self: center;
+  background: #333c4d;
+}
+
+.hour-info h5 {
+  background: #333c4d;
+  font-size: 25px;
+  justify-self: center;
+}
+
+.hour-info p {
+  justify-self: center;
+  font-size: 20px;
+  background: #333c4d;
+}
